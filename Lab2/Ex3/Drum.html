@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<style>
+    .container {
+  position: relative;
+  text-align: center;
+  color: white;
+
+}
+
+/* Bottom left text */
+.bottom-left {
+  position: absolute;
+  bottom: 8px;
+  left: 16px;
+}
+
+/* Top left text */
+.top-left {
+  position: absolute;
+  top: 8px;
+  left: 16px;
+}
+
+/* Top right text */
+.top-right {
+  position: absolute;
+  top: 8px;
+  right: 16px;
+}
+
+/* Bottom right text */
+.bottom-right {
+  position: absolute;
+  bottom: 8px;
+  right: 16px;
+}
+
+.btn{
+    margin-left: 40px;
+}
+/* Centered text */
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color:brown;
+  font-size: 40px;
+}
+
+.centered_temp {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color:white;
+  font-size: 40px;
+}
+</style>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+    </head>
+    <body style="  background-color:blueviolet">
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        <div>
+        <div style="text-align:center;font-size:60px;color:white">
+            <h1>Drum App</h1>
+        </div>
+        <div style="display:flex">
+            <button id="a" class="btn" onclick="myFunctionA()">
+                <div class="container">
+                    <img src="crash.png" alt="Snow" style="width:150px;height: 100px;">
+                    <div class="centered">A</div>
+                    <audio id="audioA" src="crash.mp3"></audio>
+                </div>
+            </button>
+
+            <button class="btn" onclick="myFunctionB()">
+                <div class="container">
+                    <img src="kick.png" alt="Snow" style="width:150px;height: 100px;">
+                    <div class="centered">B</div>
+                    <audio id="audioB" src="kick-bass.mp3"></audio>
+                </div>
+            </button>
+
+            <button class="btn" onclick="myFunctionC()">
+                <div class="container">
+                    <img src="snare.png" alt="Snow" style="width:150px;height: 100px;">
+                    <div class="centered">C</div>
+                    <audio id="audioC" src="snare.mp3"></audio>
+                </div>
+            </button>
+
+            <button class="btn" onclick="myFunctionD()">
+                <div class="container">
+                    <img src="tom1.png" alt="Snow" style="width:150px;height: 100px;">
+                    <div class="centered_temp">D</div>
+                    <audio id="audioD" src="tom-1.mp3"></audio>
+                </div>
+            </button>
+
+            <button class="btn" onclick="myFunctionE()">
+                <div class="container">
+                    <img src="tom2.png" alt="Snow" style="width:150px;height: 100px;">
+                    <div class="centered_temp">E</div>
+                    <audio id="audioE" src="tom-2.mp3"></audio>
+                </div>
+            </button>
+            <button class="btn" onclick="myFunctionF()">
+                <div class="container">
+                    <img src="tom3.png" alt="Snow" style="width:150px;height: 100px;">
+                    <div class="centered_temp">F</div>
+                    <audio id="audioF" src="tom-3.mp3"></audio>
+                </div>
+            </button>
+            <button class="btn" onclick="myFunctionG()">
+                <div class="container">
+                    <img src="tom4.png" alt="Snow" style="width:150px;height: 100px;">
+                    <div class="centered_temp">G</div>
+                    <audio id="audioG" src="tom-4.mp3"></audio>
+                </div>
+            </button>
+        </div>
+            <div style="display:block">
+            </div>
+            <p id="log"></p>
+        </div>
+        <script>
+            function myFunctionA() {
+                var audio = document.getElementById("audioA");
+                 audio.play();
+            }
+
+            function myFunctionB() {
+                var audio = document.getElementById("audioB");
+                 audio.play();
+            }
+
+            function myFunctionC() {
+                var audio = document.getElementById("audioC");
+                 audio.play();
+            }
+            function myFunctionD() {
+                var audio = document.getElementById("audioD");
+                 audio.play();
+            }
+            function myFunctionE() {
+                var audio = document.getElementById("audioE");
+                 audio.play();
+            }
+            function myFunctionF() {
+                var audio = document.getElementById("audioF");
+                 audio.play();
+            }
+            function myFunctionG() {
+                var audio = document.getElementById("audioG");
+                 audio.play();
+            }
+            function onKeyPress(){
+
+            }
+
+            const log = document.getElementById('log');
+            const input = document.querySelector('input');
+
+            const test = document.addEventListener('keypress', musicKeyPress);
+
+            function musicKeyPress(e) {
+                switch(e.code[3]) {
+                    case "A":
+                        myFunctionA()
+
+                     break;
+                    case "B":
+                        myFunctionB()
+                     break;
+                    case "C":
+                        myFunctionC()
+                     break;
+                    case "D":
+                        myFunctionD()
+                     break;
+                    case "E":
+                        myFunctionE()
+                     break;
+                    case "F":
+                        myFunctionF()
+                     break;
+                    case "G":
+                        myFunctionG()
+                     break;
+                    case "H":
+                        myFunctionH()
+                     break;
+                 default:
+                // code block
+                }
+            }
+        </script>
+    </body>
+</html>

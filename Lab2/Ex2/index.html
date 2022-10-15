@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+    </head>
+    <body>
+      <div style="display:flex">
+        <img src="https://scontent.fsgn5-6.fna.fbcdn.net/v/t39.30808-6/305918019_3271382526469716_8156135455435230561_n.jpg?stp=dst-jpg_p720x720&_nc_cat=108&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=QrXiZ0tNrssAX9SwbeU&_nc_ht=scontent.fsgn5-6.fna&oh=00_AT8JHDqbwmkFWYwNuj8rI55-ycwe_xAfJy_uwRnR656rrQ&oe=633127DA" width="300px" height="300px" >
+        <div>
+        <h1 style="color:red">Le Thinh</h1>
+        <h2>Student ID 18521437</h2>
+        <p id="ChangeResult">hello</p>
+        <button id="btn" >Change Text</button>
+        <button onClick="myFunction()">Doi mau</button>
+        <script>
+            //Ex2 bai 1
+            const btn = document.getElementById("btn");
+
+            btn.addEventListener("click", ()=>{
+                document.getElementById("ChangeResult").innerHTML = "Ket Qua Ne";
+                
+            })
+
+            //Ex2 bai 2
+            function myFunction() {
+             document.body.style.backgroundColor = "blue";
+            }
+
+        </script>
+    </div>  
+    </div>
+        <hr>
+        <h3> Introduction</h2>
+        I am a student from UIT 
+        <p>You can view my profile
+            <a href="https://www.facebook.com/profile.php">click to see my facebook</a>
+        </p>
+        </hr>
+        <hr>
+        <h2> My favorite subject</h2>
+        <ul>
+            <li>Web appplication</li>
+            <li>Mobile application</li>
+            <li>OOP</li>
+          </ul>
+
+        </hr>
+
+        <hr style="display: flex;">
+        <h2> My Ratting</h2>
+        <div style="display:flex">
+                <p>HTML CSS</p>
+                <div style="color:orange;padding-left: 10px;display:flex">
+                    <p >★ </p>
+                    <p >★ </p>
+                    <p >★ </p>
+                </div>
+          </div>
+
+          <div style="display:flex">
+            <p>Node JS</p>
+            <div style="color:orange;padding-left: 10px;display:flex">
+                <p >★ </p>
+                <p >★ </p>
+                <p >★ </p>
+                <p >★ </p>
+                <p >★ </p>
+            </div>
+
+            <div style="display:flex;padding-left: 20px;">
+                <p>React JS</p>
+                <div style="color:orange;padding-left: 10px;display:flex">
+                    <p >★ </p>
+                    <p >★ </p>
+                    <p >★ </p>
+                    <p >★ </p>
+                    <p >★ </p>
+                </div>
+      </div>
+        </hr>
+</html>

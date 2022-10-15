@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>Enter some text in the fields below, then press the "Submit form" button to submit the form.</p>
+
+<form id="myForm" action="/action_page.php">
+  username <input id="username" type="text" ><br>
+  password: <input type="text" id="password" ><br><br>
+  <input type="button" onclick="myFunction()" value="Submit form">
+</form>
+
+<script>
+function myFunction() {
+  console.log(document.getElementById("username").value);
+  console.log(document.getElementById("password").value);
+  var username = document.getElementById("username").value;
+  var password = document.getElementById("password").value;
+  var test_username = false;
+
+    var format = /[ `!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?~]/;
+    var check_character_username = format.test(username);
+    let myArray = username.split(" ");
+    var check_space_username = false;
+    if (myArray.length == 1)
+    {
+        check_character_username = true;
+
+    }
+    else{
+        check_character_username = false;
+        console.log(myArray[1])
+    }
+
+    console.log(check_character_username)
+    console.log(check_space_username)
+
+    var check_username = false
+    if (check_space_username == true && check_character_username == true)
+    {
+        check_username = true
+
+    }
+    else{
+        check_username = false
+        console.log(check_username)
+    }
+
+    var check_character_password = format.test(password);
+    let myArray2 = password.split(" ");
+    var check_space_password = false;
+    if (myArray2.length == 1)
+    {
+        check_character_password = true;
+
+    }
+    else{
+        check_character_password = false;
+        
+    }
+
+
+    var check_password = false
+    if (check_space_password == true && check_character_password == true)
+    {
+        check_password=true
+        
+    }
+    else{
+        check_password=false
+    }
+    console.log("password : ",check_password)
+    console.log("username : ",check_username)
+
+    
+  
+}
+</script>
+
+</body>
+</html>
