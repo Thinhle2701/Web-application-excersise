@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title> Hilight Bold Words </title>
+  </head>
+  <body>
+    
+    <h2 onMouseOver="highlight()" onMouseOut="returnNormal()" style="color: blue; cursor: pointer">  Hover this link </h2>
+    
+    <p style="font-size: 20px;">
+      Binh <strong> dep trai, </strong> Beo <strong> hoc gioi, </strong> em khoa <strong> hay sua bay, </strong> hoang anh <strong> bao doi bao dom. </strong>
+    </p>
+
+    var width = window.innerWidth|| document.documentElement.clientWidth|| document.body.clientWidth;
+    var height = window.innerHeight|| document.documentElement.clientHeight|| document.body.clientHeight;
+
+
+    
+
+    <p>Window witdh</p>
+
+
+
+    <script type="text/javascript">
+      function highlight() {
+        var hi = document.getElementsByTagName("strong");
+        for (var i = 0; i < hi.length; i++) {
+        hi[i].style.backgroundColor = "yellow";
+        }
+      }
+      function returnNormal() {
+        var hi = document.getElementsByTagName("strong");
+        for (var i = 0; i < hi.length; i++) {
+        hi[i].style.backgroundColor = "white";
+        }
+      }
+    </script>
+  </body>
+</html>
