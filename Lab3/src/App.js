@@ -12,6 +12,9 @@ import Excersise2 from "./Component/Excersise_2/Ex2";
 import Excersise0 from "./Component/Excersise_0/Ex0";
 import Excersise1 from "./Component/Excersise_1/index";
 import Excersise4 from "./Component/Excersise_4/index";
+import Homework1 from "./Component/Homework_1/Drum";
+import Homework3 from "./Component/Homework_3/index";
+import Homework2 from "./Component/Homework_2/index";
 export default function App() {
   return (
     <Router>
@@ -35,6 +38,15 @@ export default function App() {
           <li>
             <Link to="/excersise_4">Excersise4</Link>
           </li>
+          <li>
+            <Link to="/homework_1">Homework 1</Link>
+          </li>
+          <li>
+            <Link to="/homework_2">Homework 2</Link>
+          </li>
+          <li>
+            <Link to="/homework_3">Homework 3</Link>
+          </li>
         </ul>
 
         <Switch>
@@ -56,6 +68,15 @@ export default function App() {
           </Route>
           <Route path="/excersise_2">
             <Excersise2 />
+          </Route>
+          <Route path="/homework_1">
+            <Homework1 />
+          </Route>
+          <Route path="/homework_2">
+            <Homework2 />
+          </Route>
+          <Route path="/homework_3">
+            <Homework3 />
           </Route>
           <Route path="/">
             <Home />
