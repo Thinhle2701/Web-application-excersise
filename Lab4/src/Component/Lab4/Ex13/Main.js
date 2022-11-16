@@ -2,6 +2,8 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 const Main = () => {
   const [messages, setMessages] = useState([{ author: "", text: "" }]);
+  const [author, setAuthor] = useState("");
+  const [text, setText] = useState("");
   useEffect(() => {}, []);
   const [forum, setForum] = useState("");
   const fectchMessageNasa = async () => {
@@ -21,6 +23,19 @@ const Main = () => {
       })
       .catch((error) => setMessages([]));
   };
+  const addMessage = async () => {
+    axios
+      .post("http://localhost:8000/messages/nasa", {
+        author: author,
+        text: text,
+      })
+      .then(function (response) {
+        setMessages(response.data)
+      })
+      .catch(function (error) {
+        console.log(error);
+      });
+  };
   console.log(messages);
   return (
     <div>
@@ -33,7 +48,21 @@ const Main = () => {
       >
         Not Nasa
       </button>
-      <input></input>
+      <input
+        onChange={(e) => {
+          setAuthor(e.target.value);
+        }}
+        placeholder="Author"
+        style={{ display: "block" }}
+      ></input>
+      <input
+        onChange={(e) => {
+          setText(e.target.value);
+        }}
+        placeholder="Text"
+        style={{ display: "block" }}
+      ></input>
+      <button onClick={() => addMessage()}>Add Message</button>
       {messages.map((m) => (
         <div>
           <div>{m.author}</div>

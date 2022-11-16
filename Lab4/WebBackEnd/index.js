@@ -35,6 +35,7 @@ app.get("/messages/:forum", (req, res) => {
 app.post("/messages/:forum", (req, res) => {
   if (req.params && req.params.forum === "nasa") {
     messages.push(req.body);
+    res.send(messages);
   }
   return res.status(400).send({ error: "Unknown Forum" });
 });

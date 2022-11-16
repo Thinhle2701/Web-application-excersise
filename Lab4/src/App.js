@@ -7,13 +7,17 @@ import {
   useRouteMatch,
   useParams,
 } from "react-router-dom";
+import Ex2 from "./Component/Lab4/Ex2/App";
+import Ex3 from "./Component/Lab4/Ex3/App";
 import Ex4 from "./Component/Lab4/Ex4";
 import Ex5 from "./Component/Lab4/Ex5/index";
 import Ex6 from "./Component/Lab4/Ex6/index";
+import Ex11 from "./Component/Lab4/Ex11/App";
 import Ex12 from "./Component/Lab4/Ex12/Main";
 import Ex8 from "./Component/Lab4/Ex8/Main";
 import Ex13 from "./Component/Lab4/Ex13/Main";
 import Ex9 from "./Component/Lab4/Ex9/Excersise9";
+import Ex7 from "./Component/Lab4/Ex7/App";
 export default function App() {
   const [myComponent, setComponent] = useState(() => () => null);
   useEffect(() => {
@@ -29,6 +33,12 @@ export default function App() {
             <Link to="/">Home</Link>
           </li>
           <li>
+            <Link to="/excersise_2">Ex2</Link>
+          </li>
+          <li>
+            <Link to="/excersise_3">Ex3</Link>
+          </li>
+          <li>
             <Link to="/excersise_4">Ex4</Link>
           </li>
           <li>
@@ -38,10 +48,16 @@ export default function App() {
             <Link to="/excersise_6">Ex6</Link>
           </li>
           <li>
+            <Link to="/excersise_7">Ex7</Link>
+          </li>
+          <li>
             <Link to="/excersise_8">Ex8</Link>
           </li>
           <li>
             <Link to="/excersise_9">Ex9</Link>
+          </li>
+          <li>
+            <Link to="/excersise_11">Ex11</Link>
           </li>
           <li>
             <Link to="/excersise_12">Ex12</Link>
@@ -52,7 +68,12 @@ export default function App() {
         </ul>
 
         <Switch>
-          <Route path="/excersise_3"></Route>
+          <Route path="/excersise_2">
+            <Ex2 />
+          </Route>
+          <Route path="/excersise_3">
+            <Ex3 />
+          </Route>
           <Route path="/excersise_0"></Route>
           <Route path="/excersise_1"></Route>
 
@@ -68,8 +89,14 @@ export default function App() {
           <Route path="/excersise_8">
             <Ex8 />
           </Route>
+          <Route path="/excersise_7">
+            <Ex7 />
+          </Route>
           <Route path="/excersise_9">
             <Ex9 />
+          </Route>
+          <Route path="/excersise_11">
+            <Ex11 />
           </Route>
           <Route path="/excersise_12">
             <Ex12 />
